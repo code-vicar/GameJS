@@ -10,3 +10,7 @@ GameLoop dependencies
 RenderLoop dependencies
 	*events
 	*requestAnimationFrame
+
+---
+LICENSE
+GNU General Public License (see license text included in project)
