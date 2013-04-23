@@ -1,4 +1,5 @@
-require("coffee-script");
-var Loop = require("./lib/loop");
+var GameLoop = require("./server/GameLoop.coffee");
+var RenderLoop = require("./client/RenderLoop.coffee");
 
-module.exports.Loop = Loop
+module.exports.GameLoop = GameLoop;
+module.exports.RenderLoop = RenderLoop;

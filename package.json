@@ -13,6 +13,7 @@
     "url": "https://bitbucket.org/code_vicar/sgs"
   },
   "dependencies" : {
-    "coffee-script":"~1.6.2"
+    "coffee-script":"~1.6.2",
+    "coffeeify":"~0.4.0"
   }
 }

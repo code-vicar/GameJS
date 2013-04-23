@@ -1,17 +1,23 @@
 EE = require('events').EventEmitter
-#By default the game state will try to update itself 25 times per second
-UPDATES_PER_SECOND = 25
 
-#that means that each update has about 40 milliseconds of time to work with
-UPDATE_TIME_WINDOW = 1000 / UPDATES_PER_SECOND
+#Check the settings for the number of times per second the game
+#  should fire an update tick
+TICKS_PER_SECOND = 25
 
-class Loop extends EE
+#Divide 1 second (1000ms) by the 'ticks per second' to get the timer interval
+INTERVAL = 1000 / TICKS_PER_SECOND
+
+class GameLoop extends EE
 	constructor: ->
 		#private
 		@Tick = =>
 			#execute on each 'tick' of loop unless the game is paused
 			unless @IsPaused
-				@emit 'tick', UPDATE_TIME_WINDOW
+				dNow = Date.now()
+				@emit 'tick',
+					"now": dNow
+					"next": (dNow+INTERVAL)
+					"interval": INTERVAL
 
 		@IntervalID = 0
 		@IsRunning = false
@@ -21,7 +27,8 @@ class Loop extends EE
 	Run: ->
 		if not @IsRunning
 			#if the loop is stopped, then start a new one
-			@IntervalID = setInterval @Tick, UPDATE_TIME_WINDOW
+			@Tick()
+			@IntervalID = setInterval @Tick, INTERVAL
 			@IsRunning = true
 			@emit 'run'
 		else if @IsPaused
@@ -39,5 +46,5 @@ class Loop extends EE
 		unless @IsPaused
 			@IsPaused = true
 			@emit 'pause'
-	
-module.exports = Loop;
+
+module.exports = GameLoop;
