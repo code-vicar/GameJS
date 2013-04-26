@@ -1,7 +1,7 @@
 SGS = require("../index.js")
 
-GL = new SGS.GameLoop()
-RL = new SGS.RenderLoop(GL)
+GL = new SGS.server.GameLoop()
+RL = new SGS.client.RenderLoop(GL)
 
 tickCount = 0
 timeStart = 0

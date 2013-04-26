@@ -3,7 +3,7 @@ SGS = require("../index.js")
 tickCount = 0
 seconds = 0
 
-GL = new SGS.GameLoop();
+GL = new SGS.server.GameLoop();
 
 GL.on 'tick', (d) ->
   #d, time difference in milliseconds between ticks
