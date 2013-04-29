@@ -3,29 +3,37 @@ This is a game framework built in JavaScript, designed for use in a server-clien
 
 It uses CommonJS style modules.  Compatible with browserify.
 
-Currently in alpha development, step one is to implement game logic and rendering loops
+Currently in alpha development.
 
-GameLoop
+Completed:
 
-		Requires
+* Game and Render loops
 
-		* events
+Up Next:
 
-		Runs on
+* User input management
 
-		* Server or Client
+---
+GameLoop:
+
+* Requires
+
+		events
+
+* Runs on
+
+		Server or Client
 	
-RenderLoop 
+RenderLoop:
 
-		Requires
+* Requires
 
-		* events
-		
-		* requestAnimationFrame
+		events
+		requestAnimationFrame
 
-		Runs on
+* Runs on
 
-		* Client only
+		Client
 
 ---
 LICENSE
