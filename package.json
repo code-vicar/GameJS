@@ -1,5 +1,5 @@
 {
-  "name": "SGS",
+  "name": "GameJS",
   "version": "0.1.0",
   "author": "Scott Vickers",
   "description": "A javascript game engine, designed for client-server architectures",
@@ -10,7 +10,7 @@
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/code_vicar/sgs"
+    "url": "https://github.com/code-vicar/GameJS.git"
   },
   "dependencies" : {
     "coffee-script":"~1.6.2",
