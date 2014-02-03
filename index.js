@@ -1,5 +1,5 @@
-var GameLoop = require('./server/GameLoop.js');
-var GameServer = require('./server/GameServer.js');
+var GameLoop = require('./src/GameLoop.js');
+var GameServer = require('./src/GameServer.js');
 //var RenderLoop = require('./client/RenderLoop.js');
 
 module.exports.server = {

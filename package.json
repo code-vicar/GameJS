@@ -2,7 +2,7 @@
   "name": "GameJS",
   "version": "0.1.0",
   "author": "Scott Vickers",
-  "description": "A javascript game engine, designed for client-server architectures",
+  "description": "NodeJS game engine",
   "scripts": {
     "start": "node ./index.js",
     "test": "nodeunit ./test/index.js"
